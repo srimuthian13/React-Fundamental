@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary:#A9C4F2;
+    --primary-dark:#8CB2F0;
+    --secondary:#CDE7F0;
+    --pink:#F7C7E8;
+    --purple:#B9A7E8;
+    --green:#CBEA9A;
+    --yellow:#F6C36A;
+    --text:#5F5A7A;
+    --background:#FCFCFD;
+    --card:#FFFFFF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background: var(--primary);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 70px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Logo + Nama */
+
+.header-brand{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* Logo */
+
+.header .logo{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+
+/* Judul */
+
+.header-title-group h1{
+    font-size:42px;
+    font-weight:800;
+    color:#5F5A7A;
+    margin:0;
+    line-height:1;
+}
+
+/* Slogan */
+
+.header-title-group p{
+    margin-top:6px;
+    font-size:15px;
+    color:#ffffff;
+    opacity:.95;
+}
+
+/* Menu */
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:var(--yellow);
+
+}
+/* ================= HERO SECTION ================= */
+.hero{
+    text-align: center;
+    padding: 80px 20px;
+    background: #F8FBFF;
+}
+
+.hero h2{
+    font-size: 40px;
+    color: var(--text);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero p{
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.hero button{
+    margin-top: 30px;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-dark);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(140, 178, 240, 0.4);
+    transition: all .3s ease;
+}
+
+.hero button:hover{
+    background: var(--purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(185, 167, 232, 0.4);
+}
+
+/* ================= JOB LIST SECTION ================= */
+.job-list{
+    padding: 60px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.job-title{
+    text-align: center;
+    color: var(--text);
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.job-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card{
+    background: var(--card);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left; /* Lebih rapi rata kiri untuk kartu informasi */
+    box-shadow: 0 8px 20px rgba(0,0,0,.05);
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .3s ease;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card p{
+    color: #666;
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.detail-btn{
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.detail-btn:hover{
+    background: var(--purple);
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin-top: 60px;
+}
+
+footer p{
+    margin: 4px;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 30px;
+    }
+    .job-list {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .header-brand {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 50px 20px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .job-list {
+        padding: 30px 20px;
+    }
+    
+    .job-title {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+}
