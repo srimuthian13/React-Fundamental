@@ -2,7 +2,7 @@
 const Button = () => {
   return (
     <div>
-      <p>Click me!</p>
+      <p>Lihat Detail</p>
     </div>
   )
 }
