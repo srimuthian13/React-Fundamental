@@ -2,6 +2,8 @@ import JobCard from './JobCard';
 import jobs from '../jobs.js';
 
 const JobList = () => {
+
+ 
     return (
         <section className="job-list max-w-7xl mx-auto px-4 py-8">
             <h2 className="text-center text-amber-800 font-extrabold text-3xl md:text-4xl mb-8 tracking-wide">

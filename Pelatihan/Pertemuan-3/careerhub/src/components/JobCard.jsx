@@ -1,7 +1,10 @@
 const JobCard = ({ title, company, location, salary, status }) => {
     // Normalisasi status (menerima boolean atau string "Open"/"Closed")
     const isOpen = typeof status === 'boolean' ? status : status === 'Open';
-
+   const handleJobClick = (job) => {
+        // Handle job click event, e.g., navigate to job details page or show a modal
+        console.log('Click on job : ', job, title);
+    }
     return (
         <div className="bg-white rounded-2xl shadow-md p-6 w-full max-w-sm border border-gray-100 hover:border-blue-400 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
           <div>
@@ -35,7 +38,8 @@ const JobCard = ({ title, company, location, salary, status }) => {
               </div>
           </div>
 
-          <button className="job-card__button w-full bg-blue-600 text-white font-medium px-4 py-2.5 rounded-xl hover:bg-blue-700 active:scale-[0.98] transition-all duration-200 shadow-sm">
+          <button className="job-card__button w-full bg-blue-600 text-white font-medium px-4 py-2.5 rounded-xl hover:bg-blue-700 active:scale-[0.98] transition-all duration-200 shadow-sm"
+          onClick={() => handleJobClick({ title})}>
               Lihat Detail
           </button>
         </div>
